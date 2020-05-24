@@ -1,0 +1,580 @@
+\documentclass{uc3mpracticas}
+
+\usepackage{float}
+
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backgroundColour},
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    language=C
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                   Plantilla Prácticas UC3M                               %%%
+%%%                Universidad Carlos III de Madrid                          %%%
+%%%                   Alejandro Valverde Mahou                               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Permitir cabeceras y pie de páginas personalizados
+\pagestyle{fancy}
+
+%Path por defecto de las imágenes
+\graphicspath{ {./images/} }
+
+%Declarar formato de encabezado y pie de página de las páginas del documento
+\fancypagestyle{doc}{
+  %Cabecera
+  \headerpr[1]{Alejandro Valverde Mahou}{Diseño de Sistemas Operativos}{Trabajo Final}
+  %Pie de Página
+  \footerpr{}{}{{\thepage} de \pageref{LastPage}}
+}
+
+%Declarar formato de encabezado y pie del título e indice
+\fancypagestyle{titu}{%
+  %Cabecera
+  \headerpr{}{}{}
+  %Pie de Página
+  \footerpr{}{}{}
+}
+
+
+\appto\frontmatter{\pagestyle{titu}}
+\appto\mainmatter{\pagestyle{doc}}
+
+
+\begin{document}
+  %Comienzo formato título
+  \frontmatter
+
+
+  %Portada 1 (Centrado todo)
+  \centeredtitle{Images/LogoUC3M.png}{Grado en Ingeniería Informática}{Curso 2019-2020}{Diseño de Sistemas Operativos}{Trabajo Final}
+
+  \vspace{60mm}
+
+  \authors{Alejandro Valverde Mahou}{100383383}{}{}{}{}{}{}
+
+  \newpage
+
+
+  %Índice
+  \tableofcontents
+
+  \listoffigures
+
+  \newpage
+
+  %Comienzo formato documento general
+  \mainmatter
+
+  \section{Introducción}
+
+  \subsection{Introducción}
+
+  El \textbf{Sistema Operativo} es el \textit{software} principal de un sistema informático que gestiona el \textit{hardware} y sus recursos, y provee servicios \textit{software} a los programas de aplicación. Su función principal es permitir la comunicación entre usuario y ordenador, y gestioanr sus recursos de manera eficiente.
+
+  \begin{figure}[H]
+    \centering
+    \imgcenter[40]{Images/DefinicionSO.png}
+    \caption{Definición de Sistema Operativo}\cite{imagenSO}
+  \end{figure}
+
+  \vspace{2mm}
+
+  El sistema operativo actua como interfaz de usuario, gestor de recursos, y máquina extendida.
+
+  \subsubsection{Interfaz del Usuario}
+
+  Se divide en la interfaz del programador, que se realiza a través de llamadas al sistema y la interfaz del usuario, que se realiza a través de la interfaz gráfica o la línea de comandos.
+
+  \subsubsection{Gestor de Recursos}
+
+  Las áreas de gestión son:
+
+  \begin{itemize}
+    \item \textbf{Gestión de Procesamiento}
+
+    Se encarga de controlar el planificador de procesos, incluyendo prioridades y capacidades de multiusuario.
+
+    \item \textbf{Gestión de Memoria}
+
+    Se encarga de repartir la memoria entre procesos, com protección y compartición.
+
+    \item \textbf{Gestión de Almacenamiento}
+
+    Se encarga de la persistencia y etiquetación, independiente del medio físisco, con una visión unificada para programas y usuarios.
+
+    \item \textbf{Gestión de Dispositivos}
+
+    Se encarga de cubrir y abordar las dependencias de \textit{hardware}, y de la gestión de accesos concurrentes.
+
+  \end{itemize}
+
+  \subsubsection{Máquina extendida}
+
+  Las abstracciones fundamentales usadas por los sistemas son los \textbf{Procesos} y los \textbf{Archivos}.
+
+  \vspace{2mm}
+
+  Los procesos se organizan en una jerarquía a través de los árbloes de procesos, y son controlados a través del planificador.
+
+  \vspace{2mm}
+
+  Los archivos contienen las rutas para cada directorio y fichero.
+
+  \vspace{5mm}
+
+  Las \textbf{Máquinas Virtuales} virtualizan ciertos partes del \textit{hardware}. El hipervisor realiza una virtualizacón de toda la máquina, de forma que varios sistemas operativos pueden ser ejecutados simultaneamente.
+
+  \begin{figure}[H]
+    \centering
+    \imgcenter[40]{Images/hipervisor.png}
+    \caption{Hipervisor}\cite{hipervisor}
+  \end{figure}
+
+  El hipervisor expande las capacidades \textit{hardware}, de forma que cada sistema operativo puede trabajar simultaneamente con otros.
+
+  \vspace{3mm}
+
+  Existen diferentes tipos de máquinas virtuales, según sus capacidades.
+  \begin{figure}[H]
+    \centering
+    \imgcenter[130]{Images/vm.png}
+    \caption{Tipos de Máquinas Virtuales}
+  \end{figure}
+
+  \vspace{6mm}
+
+  Las principales características de un sistema operativo son:
+
+  \begin{itemize}
+    \item \textbf{Veratilidad y portabilidad}: Puede ejecutarse en diferentes máquinas.
+    \item \textbf{Adaptativilidad}: Permite añadir y modificar módulos, en función de la demanda de los usuarios, evolución del \textit{hardware} o aparición de distintos entornos.
+    \item \textbf{Multidisciplinalidad}: Integra trabajos de distintas áreas.
+    \item \textbf{Complejidad}: Dado que realiza numerosas tareas diferentes, es un programa muy complejo y con muchas líneas de código.
+    \item \textbf{Delicado}: Un fallo en culauqier parte del sistema puede provocar un colapso completo del sistea operativo.
+  \end{itemize}
+
+  Los objetivos en el diseño de un sistema operativo son:
+
+  \begin{itemize}
+    \item \textbf{Rendimiento}: Eficiencia y velocidad.
+    \item \textbf{Estabilidad}: Robustez y resistencia.
+    \item \textbf{Capacidad}: Prestaciones,. flexibilidad y compatibilidad.
+    \item \textbf{Seguridad y Protección}.
+    \item \textbf{Portabilidad}.
+    \item \textbf{Claridad}.
+    \item \textbf{Extensibilidad}.
+  \end{itemize}
+
+  Estas carecterísticas son incompatibles entre sí, por lo que en el diseño es necesario priorizar una característica sobre otras, buscando el equilibrio entre todas.
+
+  \subsubsection{Estructura del Sistema Operativo}
+
+  \begin{enumerate}
+    \item \textbf{Monolítico}
+
+    Es no estructurado. Desde cualquier punto del código se puede acceder a cualquier variable o función. Es dificil de mantener y muy sensible a los errores.
+
+    \item \textbf{Subsistemas}
+
+    Es un sistema monolítico compuesto de subsistemas lógicos. Se agrupan procedimientos y estructuras de datos relacionadas.
+
+    \item \textbf{Por Capas}
+
+    Sistema monolítico, pero estructurado por capas, de forma lógica. Cada capa proporciona acceso únicamente a la interfaz de niveles inferiores, de forma que no hay conexión entre capas no conectadas.
+
+    \item \textbf{Microkernel}
+
+    Una pequeña parte de las acciones se hacen en el kernel. El resto se hacen fuera, a nivel usuario.
+
+  \end{enumerate}
+
+  \begin{figure}[H]
+    \centering
+    \imgcenter[90]{Images/estructura.png}
+    \caption{Estructura del S.O. MS-DOS}\cite{msdos}
+  \end{figure}
+
+
+  \subsection{Ejecución Asíncrona y Modular}
+
+  Los sistemas operativos son sistemas orientados a eventos.
+
+  \vspace{2mm}
+
+  Los eventos interrumpen la ejecución normal del código, dejándolo en segundo plano y sin actuar, hasta que el manejador del evento termina su ejecución.
+
+  \subsubsection{Ejecución Asíncrona}
+
+  Las señales consta de un evento y un manejador. Su programación es de la siguiente manera:
+
+  \begin{lstlisting}[style=CStyle]
+  int global1; // La comunicacion de funciones se usa a traves de varables globales
+
+  void handler( ... ){ // La funcion manejadora se encarga de tratar el evento
+  ...
+  }
+
+  int main( ... ){
+  ...
+  On(event1, handler1); // Se asocia el manejador al evento
+  ...
+  }
+  \end{lstlisting}
+
+  \textbf{Ejemplo completo de señales}:
+
+  El comando \texttt{signal()} añade una señal a un manejador.
+
+  \vspace{2mm}
+
+  El comando \texttt{sigaction()} asocia una señal a un manejador usando una máscara.
+
+  \begin{lstlisting}[style=CStyle]
+    #include<stdio.h>
+    #include<signal.h>
+    #include<unistd.h>
+
+    int s1;
+
+    void sig_handler (int signo){
+      printf(" S ");
+    }
+
+    int main(void){
+      if (signal(s1, sig_handler) == SIG_ERR){
+        printf("\nNo se puede capturar SIGINT\n");
+      }
+
+      for(int i = 0; i < 5; i++){
+        if(i == 2 || i == 4){
+          s1();
+        }
+        printf(i);
+      }
+      return 0;
+    }
+  \end{lstlisting}
+
+  En el código anterior, el resultado obtenido sería: \texttt{0, 1, S, 2, 3, S, 4}.
+
+  \subsubsection{Interrupciones \textit{hardware}}
+
+  Cada periférico puede generar una interrupción y dispone de una línea \textbf{IRQ}(\textit{Interrupt ReQuest}), conectada con el \textbf{PIC}(\textit{Programmable Interrupt COntroller}).
+
+  \vspace{2mm}
+
+  El \textbf{PIC} controla las líneas de \textbf{IRQ} para recibir las señales que envíen.
+  \vspace{1mm}
+  Si llega una señal:
+
+  \begin{enumerate}
+    \item Asigna al \textbf{IRQ} del periférico un valor que guarda en \textbf{PIC}.
+    \item Avisa a la \textbf{CPU} a través de la línea de Interrupciones Pendientes(\textbf{INT}).
+    \item La \textbf{CPU} procesa el registro del \textbf{PIC}.
+    \item La \textbf{CPU} informa de que ha leido correctamente la interrupción.
+    \item El \textbf{PIC} anula la lñinea de interrupción procesada.
+  \end{enumerate}
+
+  Por último, la \textbf{CPU} almacena la interrupción en el \textbf{IDT}(\textit{Interrupt Description Table}), y guarda el estado actual de l proceso en pila, de forma que puede ejecutar la interrupción y recupera al finalizarlo el contenido del proceso de la pila.
+
+  \begin{figure}[H]
+    \centering
+    \imgcenter[130]{Images/InterrupcionHW.png}
+    \caption{Interrupciones \textit{Hardware}}
+  \end{figure}
+
+  \subsubsection{Módulos del kernel}
+
+  Los primeros \textit{kernel} necesitaban incluir código para todo tipo de dispositivos, algo que actualmente es inconcebible debido al gran número de dispositivos que existen. Además, era necesario recompilar el kernel cada vez que se quería añadir un nuevo dispositivo.
+
+  \vspace{3mm}
+
+  Los módulos se crearon para poder superar estas dificultades, permitiendo al \textit{kernel} añadir la inclusión condicional de controladores de dispositivos, los \textbf{drivers}.
+
+  \vspace{1mm}
+
+  Los módulos permiten añadir código de forma dinámica de un driver precompilado. Para poder ser distribuidos, se usan \textbf{bibliotecas dinámicas}(\textit{*.so/*.ko}, \textit{*.dll}).
+
+  \subsubsection{Bibliotecas}
+
+  Las bibliotecas son conjuntos de módulos objeto. Existen dos tipos de bibliotecas:
+
+  \vspace{2mm}
+
+  \textbf{Biblioteca Estática}: Es añadida por el compilador, al igual que los módulos objeto.
+
+  \vspace{2mm}
+
+  \textbf{Biblioteca Dinámica}: Es añadida en tiempo de ejecución, y por tanto debe informarse de su uso en la ejecución.
+
+  Su diferencia principal reside en el uso de memoria. Si dos procesos usan la misma biblioteca estática, debe argarse dos veces, ientras que si usan la misma biblioteca dinámica solo hace falta cargarla una vez. Por tanto, en caso de que varios procesos usan la misma biblioteca, las bibliotecas dinámicas ahorran memoria.
+
+
+  \section{Funcionamiento del Sistema Operativo}
+
+  El sistema operativo se ejecutrat como programa ejecutable en el arranque del sistema.
+
+  \vspace{2mm}
+
+  El sistema operativo necesita que existan al menos dos modos de ejecución:
+
+  \vspace{3mm}
+
+  \textbf{Modo privilegiado}, o modo kernel: Tiene acceso a todo el espacio de memoria y a todas las instrucciones.
+
+  \vspace{1mm}
+
+  \textbf{Modo ordinario}, o modo usuario: Solo tienen acceso a parte del espacio de memoria e instrucciones.
+
+  \subsubsection{Tratamiento de eventos}
+
+  El sistema operativo espera de forma asíncrona y pasiva a la ejecución de los distintos eventos posibles.
+
+  \vspace{3mm}
+
+  Existen una serie de procesos, denominados \textbf{Procesos del Núcleo} que pertenencen al sistema operativo, y no a los usuarios, como el \textit{firewall} o el antivirus. Estos procesos realizan tareas 'especiales' y son ocultos en funcionamiento al usuario.
+
+  \subsubsection{Proceso de arranque del sistema}
+
+  \begin{enumerate}
+    \item \textbf{Reset} pone todo a 0 y se cargan los valores iniciales en la \textbf{ROM}.
+    \item Se ejecuta el cargador del sistema, leyendo el trozo del \textbf{disco duro} en \textbf{memoria} y hace el \textit{Power-On Self Test}(\textbf{POST}), que comprueba que no haya ningún cambio en el \textit{hardware} y se carag el \textbf{MBR}(\textit{Master Boot Loader}).
+    \item El \textbf{MBR} va al \textbf{disco duro} y al \textbf{BL}(\textit{Boot Loader}) que inicializa el kernel del sistema operativo.
+    \item Una vez el kernel se ha iniciado, se carga el sistema y todos los \textit{daemons} necesarios.
+  \end{enumerate}
+
+  \begin{figure}[H]
+    \centering
+    \imgcenter[100]{Images/Boot.png}
+    \caption{Arranque Simplificado del Sistema Operativo}
+  \end{figure}
+
+  El \textbf{UEFI} es un programa de arranque que se aloja en una partición especial. Ni puede ser modificado y es muy flexible. Al combinar el \textbf{UEFI} con el \textbf{MBR} aumenta la complejidad y disminuye la seguridad.
+
+  \vspace{2mm}
+
+  Para acelerar el proceso de arranque se inicia en paralelo el \textit{software} y el \textit{hardware}.
+
+
+  \subsection{Eventos}
+
+  Existen cuatro tipos de eventos, que, ordenados de más cercanos a más lejanos al usuario son: Llamadas al sistema, excepciones, interrupciones \textit{software} e interrupciones \textit{hardware}.
+
+  \vspace{2mm}
+
+  Independientemente del \textit{hardware} del sistema, se utiliza el mismo mecanismo: Antes de la microinstrucción \textit{fetch}, se hace una comprobación de que no haya ningún evento pendiente. Si hay alguno pendiente, se entra en modo priviliegiado y se realiza el evento. Cuando no queda ningún evento activo, se reinstaura el estado de la pila y se vuelve al modo anterior.
+
+  \subsubsection{Llamadas al Sistema}
+
+  Son solicitudes de servicios al sistema operativo. Todas las llamadas suelen llamar a la misma función, y, a través de una tabla secundaria se redirige al comportamiento deseado. Este tratamiento se hace así para que la tabla auxiliar sea lo más compacta posible.
+
+  \vspace{2mm}
+
+  Desde el punto de vista de los usuarios, las llamadas al sistema son funciones, y para la CPU es lo mismo qeu si un periférico hiciera una interrupción, porque se simula una interrupción por \textit{software}.
+
+  \vspace{2mm}
+
+  Se hacen siempre desde modo usuario, y son generadas por las aplicaciones. Son eventos síncronos de \textit{software}
+
+  \subsubsection{Excepciones}
+
+  Son interrupciones de la CPU a sí misma para el tratamiento de rutinas especiales. Son los errores en la programación. Cuando se detecta una excepción, se salta a la subrutina asociada, y se comprueba si se ha generado desde modo usuario o modo kernel.
+
+  \vspace{2mm}
+
+  Si es desde el modo de usuario, y no se esta en modo depuración, se aborta el proceso.
+
+  \vspace{1mm}
+
+  Si es desde modo kernel, se llama a la subrutina \texttt{panic()}, que para el sistema completamente (En \textit{Windows} es el pantallazo azul). De esta forma se evita la sobreescritura indeseada de datos.
+
+  \vspace{3mm}
+
+  \subsubsection{Interrupciones \textit{software}}
+
+  Se encargan de ejecutar las partes críticas llamandose desde el sistema operativo. Se resuelven todas las interrupciones por orden de urgencia, y no se vuelve al modo usuario hasta que no queda ningún evento por tratar.
+
+  \subsubsection{Interrupciones \textit{hardware}}
+
+  Son eventos asíncronos \textit{hardware}. Son formas de avisar al sistema operativo cuando se requiere de algun servicio \textit{hardware}. Son requeridas varias subrutinas para cada evento.
+
+  \vspace{2mm}
+
+  Cuando se inicializa el sistema operativo, se establecen los manejadoresde todas las posibles interrupciones, y, cuando hay una interrupción, se guarda el estado actualñ, se realiza la interrupción y si es necesario, se programa una tarea pendiente. Por último, se reinstaura el estado del sistema.
+
+  \subsection{Procesos del núcleo}
+
+  Pertenecen al \textit{kernel} y se ejecuta siempre en modo privilegiado. Se utilizan cuando se tiene que usar el sistema operativo en una operacion concreta que funciona mejor siendo un proceso independiente. Suelen tener mayor prioridad que el resto de procesos. Un ejemplo de proceso de núcleo son aquellos procesos encargados de realizar las operaciones de bloqueo.
+
+
+
+  \section{Introducción a la Gestión de Procesos y Drivers}
+
+  \subsection{Introducción a Procesos y Periféricos}
+
+  \subsubsection{Procesos}
+
+
+  Un proceso es una unidad de actividad que se caracteriza por la ejecución de una secuencia de instrucciones, un estado actual, y un conjunto de recursos del sistema asociados, o, coloquialmente, un proceso es un programa en ejecución\cite{proceso}.
+
+  \vspace{2mm}
+
+  Los requisitos principales de un sistema operativo son:
+
+  \begin{itemize}
+    \item \textbf{Control de recursos} $\rightarrow$ En que lugares se encuentran los distintos recursos (código datos y pila), que archivos se encuentran abiertos...
+    \item \textbf{Multiprogramación} $\rightarrow$ Poder tener varias aplicaciones cargadas en memoria, realizar cambios de contexto voluntarios para mejorar la eficiencia de uso del procesador...
+    \item \textbf{Protección y compartición} $\rightarrow$ Impedir que un programa o proceso acceda a los datos de otro proceso, pero permitiendo la comunicación en ciertos casos.
+    \item \textbf{Jerarquía de procesos} $\rightarrow$ Permitir operaciones que afecten a conjuntos o familias de procesos.
+    \item \textbf{Multitarea} $\rightarrow$ Limitar el tiempo de actividad de los procesos no bloqueados, para permitit varios procesos actuando a la vez.
+    \item \textbf{Multiproceso} $\rightarrow$ Poder ejecutar varios procesos al mismo tiepo, uno en cada \textit{core}.
+  \end{itemize}
+
+  Los sistemas operativos cuentan con una serie de tablas, que actuan como peuqñas bases de datos, y son: \textbf{Tabla de Procesos}, que almacena el \textbf{BCP} de los procesos del sistema; \textbf{Tabla de Memoria}; \textbf{Tabal de Entrada/Salida} y \textbf{Tabla de Ficheros}.
+
+  \vspace{2mm}
+
+  El \textbf{BCP}(\textit{Bloque de Control de Procesos}) es una estructura de datos que almacena la información necesaria para identificar y gestionar un proceso.
+
+  \vspace{5mm}
+
+  Los procesos pueden ser creados o en el arranque del sistema, o cuando un proceso existente hace una llamada al sistema para crear u proceso nuevo.
+
+  \vspace{1mm}
+
+  Un proceso puede terminar de forma voluntaria, o de forma involuntaria, cuando es finalizado por el usuario, el sistema u otro proceso.
+
+  \subsubsection{Periféricos}
+
+  Se consideran periféricos a las unidades o dispositivos de \textit{hardware} a través de los cuales la computadora se comunica con el exterior, y también a los sistemas que almacenan o archivan la información, sirviendo de memoria auxiliar de la memoria principal. \cite{periferico}
+
+  \vspace{2mm}
+
+  Un periférico está compuesto de un dispositivo \textit{hardware}, encargado de realizar la interacción con el entorno, y un módulo de entrada/salida, que actua de interfaz entre el dispositivo y la CPU.
+
+  \begin{figure}[H]
+    \centering
+    \imgcenter[50]{Images/Periferico.png}
+    \caption{Esquema Simplificado de un Periférico}
+  \end{figure}
+
+  \vspace{3mm}
+
+  Es necesrio incluir el modulo de entrada/salida porque:
+
+  \begin{enumerate}
+    \item Existe una gran variedad de periféricos, y una CPU no almacena la información requerida para cada uno de ellos.
+    \item Los periféricos son lentos, y su velocidad de transferencia es menor que la de la memoria o el procesador. Necesitan de algo que iguale esas velocidades.
+    \item Los formatos y tamaños no siempre coinciden entre los distintos periféricos
+  \end{enumerate}
+
+  \vspace{2mm}
+
+  Los periféricos se pueden dividir por:
+
+  \begin{enumerate}
+    \item Direccionamiento de E/S
+    \begin{itemize}
+      \item \textbf{Espacio de memoria conjunto}
+
+      Se puede acceder a las direcciones de memoria del controlador desde la memoria principal.
+
+      \item \textbf{Espacio de memoria separado (puertos)}
+
+      Se accede a los registros del controlador a través de instrucciones en ensamblador especiales.
+
+    \end{itemize}
+    \item Unidad de transferencia
+    \begin{itemize}
+      \item \textbf{Dispositivos de bloque}
+
+      Dispositivos como cintas o discos, se acceden por bloques de \textit{bytes}.
+
+      \item \textbf{Dispositivos de carácter}
+
+      Dispositivos como teclados o impresoras, se acceden por caracteres.
+
+    \end{itemize}
+    \item Interacción con computador
+    \begin{itemize}
+      \item \textbf{E/S programada o directa}
+
+      Está constantemente comprobando si es necesario transferir información. Es lento y muy ineficaz.
+
+      \item \textbf{E/S por interrupciones}
+
+      Solo se actua cuando es necesario enviar la información (no hace comprobaciones constantemente). Mejhora la eficiencia.
+
+      \item \textbf{E/S por DMA (\textit{Direct Memory Access})}
+
+      Solo se avisa cuando se han terminado todas las tareas que tenía encargadas. Se suele usar en dispositivos que se comunican por bloque. Requiere un mayor coste de \textit{hardware}, pero mejora la eficiencia y velocidad.
+
+    \end{itemize}
+  \end{enumerate}
+
+  \subsection{C.C.V., C.C.I y Planificación}
+
+  \subsection{Drivers y Servicios Ampliados}
+
+
+
+  \section{Introducción al Diseño de un Sistema de Ficheros}
+
+  \section{Sistema de Memoria}
+
+  \subsection{Introducción al Sistema de Memoria}
+
+  \subsection{Gestión de Memoria}
+
+
+  \section{Aspectos avanzados}
+
+
+  \newpage
+
+  \begin{thebibliography}{9}
+    \bibitem{imagenSO}
+    Sistema operativo. En Wikipedia. Recuperado el 16 de mayo de 2020, de \url{https://es.wikipedia.org/wiki/Sistema_operativo}
+
+    \bibitem{hipervisor}
+    Hipervisor. En Wikipedia. Recuperado el 16 de mayo de 2020, de \url{https://es.wikipedia.org/wiki/Hipervisor}
+
+    \bibitem{msdos}
+    tutorialspoint, Operating System Structure. Kristi Castro. Recuperado el 16 de mayo de 2020, de \url{https://www.tutorialspoint.com/Operating-System-Structure}
+
+    \bibitem{proceso}
+    Proceso (informática). En Wikipedia. Recuperado el 23 de mayo de 2020, de \url{https://es.wikipedia.org/wiki/Proceso_(inform%C3%A1tica)}
+
+    \bibitem{periferico}
+    Periférico (informática). En Wikipedia. Recuperado el 24 de mayo de 2020, de \url{https://es.wikipedia.org/wiki/Perif%C3%A9rico_(inform%C3%A1tica)}
+
+  \end{thebibliography}
+
+
+
+
+
+\end{document}
