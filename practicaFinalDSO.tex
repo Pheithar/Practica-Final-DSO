@@ -228,21 +228,24 @@
 
   \subsubsection{Ejecución Asíncrona}
 
-  Las señales consta de un evento y un manejador. Su programación es de la siguiente manera:
+  Las señales consta de un evento y un manejador.
 
-  \begin{lstlisting}[style=CStyle]
-  int global1; // La comunicacion de funciones se usa a traves de varables globales
+  \begin{figure}[H]
+    \begin{lstlisting}[style=CStyle]
+    int global1; // La comunicacion de funciones se usa a traves de varables globales
 
-  void handler( ... ){ // La funcion manejadora se encarga de tratar el evento
-  ...
-  }
+    void handler( ... ){ // La funcion manejadora se encarga de tratar el evento
+      ...
+    }
 
-  int main( ... ){
-  ...
-  On(event1, handler1); // Se asocia el manejador al evento
-  ...
-  }
-  \end{lstlisting}
+    int main( ... ){
+      ...
+      On(event1, handler1); // Se asocia el manejador al evento
+      ...
+    }
+    \end{lstlisting}
+    \caption{Estructura de un manejador de eventos}
+  \end{figure}
 
   \textbf{Ejemplo completo de señales}:
 
@@ -252,7 +255,8 @@
 
   El comando \texttt{sigaction()} asocia una señal a un manejador usando una máscara.
 
-  \begin{lstlisting}[style=CStyle]
+  \begin{figure}[H]
+    \begin{lstlisting}[style=CStyle]
     #include<stdio.h>
     #include<signal.h>
     #include<unistd.h>
@@ -276,7 +280,10 @@
       }
       return 0;
     }
-  \end{lstlisting}
+    \end{lstlisting}
+    \caption{Programación de un manejador de ejemplos básico}
+  \end{figure}
+
 
   En el código anterior, el resultado obtenido sería: \texttt{0, 1, S, 2, 3, S, 4}.
 
@@ -537,6 +544,42 @@
 
   \subsection{C.C.V., C.C.I y Planificación}
 
+  Para poder tener varias aplicaciones en memoria, es necesario dotar a los procesos de un estado. De esta forma, se tiene una lista de procesos listos, cuyo primer proceso pasa al estado ejecutando. El siguiente proceso no puede comenzar a ejectuar hasta que el proceso que esta ejecutando se bloquee o termine.
+
+  \begin{figure}[H]
+    \centering
+    \imgcenter[100]{Images/States.png}
+    \caption{Diagrama de Estados de los Procesos}\cite{states}
+  \end{figure}
+
+
+  Para implementar esta estructura y poder realizar \textbf{CCV}(\textit{Cambio de Contexto Voluntario}), es necesario el uso de dos colas diferentes: \textbf{Cola de Listos} y \textbf{Cola de BLoqueados}. Cada una almacena los procesos listos y los procesos bloquedos correspondientemente.
+  \begin{figure}[H]
+
+    \begin{lstlisting}[style=CStyle]
+    void CCV (){
+      procesoActual->estado = BLOQUEADO;    //Primero se pone el proceso actual a bloqueado
+      insert(L_BLOQUEADOS, procesoActual);  // Y se inserta en la lista de bloqueados
+
+      proceso = procesoActual;              //Se almacena el proceso actual en una variable auxiliar
+
+      procesoActual = planificador();       // Y se actualia el proceso actual
+      procesoActual->estado = EJECUTANDO;   //Poniendose como ejecutando
+
+      //Por ultimo se realiza el cambio de contexto
+      cambioContexto(&(proceso), &(procesoActual))
+    }
+    \end{lstlisting}
+    \caption{Pseudocódigo del Cambio de Contexto Voluntario}
+  \end{figure}
+
+  El \textbf{planificador} es el encargado de decidir cual es el siguiente proceso que debe ser ejecutado, y la función \textbf{cambioContexto} actua como \textit{activador}, y da control al proceso seleccioando anteriormente.
+
+  \vspace{5mm}
+
+  El \textbf{CCI}(\textit{Cambio de Contexto Involuntario})
+
+
   \subsection{Drivers y Servicios Ampliados}
 
 
@@ -570,6 +613,9 @@
 
     \bibitem{periferico}
     Periférico (informática). En Wikipedia. Recuperado el 24 de mayo de 2020, de \url{https://es.wikipedia.org/wiki/Perif%C3%A9rico_(inform%C3%A1tica)}
+
+    \bibitem{states}
+    studytonight, Operating System Processes. Recuperado el 25 de mayo de 2020, de \url{https://www.studytonight.com/operating-system/operating-system-processes}
 
   \end{thebibliography}
 
