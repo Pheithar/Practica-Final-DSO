@@ -1,32 +1,32 @@
 \babel@toc {spanish}{}
-\contentsline {section}{\numberline {1}Introducción}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Introducción}{3}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1}Interfaz del Usuario}{3}{subsubsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.2}Gestor de Recursos}{3}{subsubsection.1.1.2}%
-\contentsline {subsubsection}{\numberline {1.1.3}Máquina extendida}{4}{subsubsection.1.1.3}%
-\contentsline {subsubsection}{\numberline {1.1.4}Estructura del Sistema Operativo}{5}{subsubsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.2}Ejecución Asíncrona y Modular}{6}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Ejecución Asíncrona}{6}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}Interrupciones \textit {hardware}}{7}{subsubsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.3}Módulos del kernel}{7}{subsubsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.4}Bibliotecas}{7}{subsubsection.1.2.4}%
-\contentsline {section}{\numberline {2}Funcionamiento del Sistema Operativo}{8}{section.2}%
-\contentsline {subsubsection}{\numberline {2.0.1}Tratamiento de eventos}{8}{subsubsection.2.0.1}%
-\contentsline {subsubsection}{\numberline {2.0.2}Proceso de arranque del sistema}{8}{subsubsection.2.0.2}%
-\contentsline {subsection}{\numberline {2.1}Eventos}{8}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Llamadas al Sistema}{8}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Excepciones}{9}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Interrupciones \textit {software}}{9}{subsubsection.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.1.4}Interrupciones \textit {hardware}}{9}{subsubsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.2}Procesos del núcleo}{9}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Introducción a la Gestión de Procesos y Drivers}{9}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Introducción a Procesos y Periféricos}{9}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Procesos}{9}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Periféricos}{10}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.2}C.C.V., C.C.I y Planificación}{11}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Drivers y Servicios Ampliados}{13}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Introducción al Diseño de un Sistema de Ficheros}{13}{section.4}%
-\contentsline {section}{\numberline {5}Sistema de Memoria}{13}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Introducción al Sistema de Memoria}{13}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Gestión de Memoria}{13}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Aspectos avanzados}{13}{section.6}%
+\contentsline {section}{\numberline {1}Introducción}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Introducción}{4}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Interfaz del Usuario}{4}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Gestor de Recursos}{4}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Máquina extendida}{5}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}Estructura del Sistema Operativo}{6}{subsubsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.2}Ejecución Asíncrona y Modular}{7}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Ejecución Asíncrona}{7}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Interrupciones \textit {hardware}}{8}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Módulos del kernel}{8}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Bibliotecas}{8}{subsubsection.1.2.4}%
+\contentsline {section}{\numberline {2}Funcionamiento del Sistema Operativo}{9}{section.2}%
+\contentsline {subsubsection}{\numberline {2.0.1}Tratamiento de eventos}{9}{subsubsection.2.0.1}%
+\contentsline {subsubsection}{\numberline {2.0.2}Proceso de arranque del sistema}{9}{subsubsection.2.0.2}%
+\contentsline {subsection}{\numberline {2.1}Eventos}{9}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Llamadas al Sistema}{9}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Excepciones}{10}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Interrupciones \textit {software}}{10}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Interrupciones \textit {hardware}}{10}{subsubsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.2}Procesos del núcleo}{10}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Introducción a la Gestión de Procesos y Drivers}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Introducción a Procesos y Periféricos}{10}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Procesos}{10}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Periféricos}{11}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}C.C.V., C.C.I y Planificación}{12}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Drivers y Servicios Ampliados}{14}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Introducción al Diseño de un Sistema de Ficheros}{15}{section.4}%
+\contentsline {section}{\numberline {5}Sistema de Memoria}{15}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Introducción al Sistema de Memoria}{15}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Gestión de Memoria}{15}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Aspectos avanzados}{15}{section.6}%

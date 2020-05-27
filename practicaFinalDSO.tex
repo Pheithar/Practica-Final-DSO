@@ -81,6 +81,8 @@
   %Índice
   \tableofcontents
 
+  \newpage
+
   \listoffigures
 
   \newpage
@@ -631,6 +633,51 @@
 
   La mayor parte del sistema operativo está ocupada por los drivers. Este código tiene acceso completo al sistema, de forma similar al kernel.
 
+  \vspace{4mm}
+
+  En \textit{Linux} se pueden usar llamadas genéricas, porque todo se trata como si fuera un fichero. Esto permite sustituir el \textit{hardware} sin necesidad de recompilar ni modificar el código.
+
+  \vspace{3mm}
+
+  Cada dispositivo \textit{hardware} tiene un \textit{ID mayor} que identifica el driver que usa, y un \textit{ID minor} que identifica al componente \textit{hardware} en concreto.
+
+  \begin{figure}[H]
+    \centering
+    \imgcenter{Images/EntradaSalida.png}
+    \caption{Arquitectura del sistema de E/S}\cite{E/S}
+  \end{figure}
+
+  La clasificación clásica de los drivers es en 3 tipos diferentes:
+
+  \begin{itemize}
+    \item \textbf{Dispositivos de caracteres}
+    \item \textbf{Dispositivos de bloques}
+    \item \textbf{Dispositivos de red}
+  \end{itemize}
+
+  \vspace{5mm}
+
+  Los servicios ampliados son módulos utilizados para añadir y/o ampliar las funcionalidades de los drivers. Es un driver que comunica con otro driver, en lugar de comunicar con el \textit{hardware}.
+
+  \vspace{5mm}
+
+  Los módulos driver tienen varios componentes diferenciados:
+
+  \begin{enumerate}
+    \item \textbf{Interfaz}: Comunica el módulo con los procesos.
+    \item \textbf{Específico}: Comunica el módulo con cada uno de los componentes \textit{hardware}.
+    \item \textbf{Carga}: Comunica el módulo con el sistema operativo.
+    \item \textbf{Planificación de la Entrada/Salida}: Realiza los computos internos relacionados con la planificación.
+    \item \textbf{Inicialización y finalización}: Encargado de controlar si el driver se encuentra inicializado o terminado.
+
+
+  \end{enumerate}
+
+  \begin{figure}[H]
+    \centering
+    \imgcenter[110]{Images/modulosDriver.png}
+    \caption{Estructura de un Módulo Driver}
+  \end{figure}
 
   \section{Introducción al Diseño de un Sistema de Ficheros}
 
@@ -661,6 +708,9 @@
 
     \bibitem{periferico}
     Periférico (informática). En Wikipedia. Recuperado el 24 de mayo de 2020, de \url{https://es.wikipedia.org/wiki/Perif%C3%A9rico_(inform%C3%A1tica)}
+
+    \bibitem{E/S}
+    Arquitectura del sistema de E/S. Lección 3c procesos, periféricos, drivers y servicios ampliados. Grupo ARCOS, Departamento de Informática, Universidad Carlos III de Madrid. Diapositiva 22. Recuperado el 27 de mayo de 2020, de \url{https://aulaglobal.uc3m.es/pluginfile.php/3449191/mod_resource/content/18/dso-clases-3c-ppdsa_drv_sa-v5e.pdf} (Puede que no sea visisble a no miembros de la Universidad Carlos III de Madrid)
 
   \end{thebibliography}
 

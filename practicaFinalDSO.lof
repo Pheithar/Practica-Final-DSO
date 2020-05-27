@@ -1,13 +1,15 @@
 \babel@toc {spanish}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Definición de Sistema Operativo}}{3}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Hipervisor}}{4}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Tipos de Máquinas Virtuales}}{4}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Estructura del S.O. MS-DOS}}{5}{figure.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Estructura de un manejador de eventos}}{6}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Programación de un manejador de ejemplos básico}}{6}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Interrupciones \textit {Hardware}}}{7}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Arranque Simplificado del Sistema Operativo}}{8}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Esquema Simplificado de un Periférico}}{10}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de Estados de los Procesos con Cambio de Contexto Voluntario}}{11}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Pseudocódigo del Cambio de Contexto Voluntario}}{12}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de Estados de los Procesos con Cambio de Contexto Involuntario}}{12}{figure.12}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Definición de Sistema Operativo}}{4}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Hipervisor}}{5}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Tipos de Máquinas Virtuales}}{5}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Estructura del S.O. MS-DOS}}{6}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Estructura de un manejador de eventos}}{7}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Programación de un manejador de ejemplos básico}}{7}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Interrupciones \textit {Hardware}}}{8}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Arranque Simplificado del Sistema Operativo}}{9}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Esquema Simplificado de un Periférico}}{11}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de Estados de los Procesos con Cambio de Contexto Voluntario}}{12}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Pseudocódigo del Cambio de Contexto Voluntario}}{13}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de Estados de los Procesos con Cambio de Contexto Involuntario}}{13}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Arquitectura del sistema de E/S}}{14}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Estructura de un Módulo Driver}}{15}{figure.14}%
