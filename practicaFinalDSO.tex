@@ -548,8 +548,8 @@
 
   \begin{figure}[H]
     \centering
-    \imgcenter[100]{Images/States.png}
-    \caption{Diagrama de Estados de los Procesos}\cite{states}
+    \imgcenter[100]{Images/CCV.png}
+    \caption{Diagrama de Estados de los Procesos con Cambio de Contexto Voluntario}
   \end{figure}
 
 
@@ -577,11 +577,59 @@
 
   \vspace{5mm}
 
-  El \textbf{CCI}(\textit{Cambio de Contexto Involuntario})
+  El \textbf{CCI}(\textit{Cambio de Contexto Involuntario}) permite dividir el tiempo de los procesos, y alternar entre los procesos en ejecución, no exclusivamente cuando el proceso que se está ejecutando termina o se bloquea. De esta forma, según la planificación, se puede alternar entre ejecutando y listo.
+
+  \begin{figure}[H]
+    \centering
+    \imgcenter[100]{Images/CCI.png}
+    \caption{Diagrama de Estados de los Procesos con Cambio de Contexto Involuntario}
+  \end{figure}
+
+  Dentro de la planificación, existen 3 niveles:
+
+  \begin{itemize}
+    \item \textbf{Planificación a largo plazo}: Decide que procesos deben ponerse a ejecutar. Dado que es lento, se invoca con una frecuencia baja.
+    \item \textbf{Planificación a medio plazo}: Es la que decide que procesos deben añadirse a la RAM.
+    \item \textbf{Planificación a corto plazo}: Es el proceso más rápido, y que se ejecuta más frecuentemente. Decide que procesos tiene la CPU.
+  \end{itemize}
+
+  Características de los planificadores:
+
+  \begin{itemize}
+    \item \textbf{Multitarea Apropiativa}: Puede ser con o sin expulsión. Si tiene expulsión, requiere de un reloj que limite el tiempo en ejecución de los procesos. Sin expulsión es CCV y con expulsión es CCI.
+    \item \textbf{Clasificación de elementos en las colas}: Esta clasificación puede ser por prioridades, que tienen que ser añadida en cada proceso, o puede ser por tipo, que puede ser, por ejmplo, por más 'rachas' de tiempo usando la CPU.
+    \item \textbf{Conocimiento de la CPU}: Aquí se puede tener en cuenta la \textit{Afinidad}, o simpatía de un proceso con una CPU concreta, y la \textit{Simetría}, o capacidades especiales de la CPU para ejecutar un proceso concreto.
+  \end{itemize}
+
+  Principales algoritmos de planificación:
+
+  \begin{itemize}
+    \item \textbf{\textit{Round Robin}}: Asignación rotatoria de procesos. Se le asigna un tiempo máximo en forma de rodaja a los procesos en ejecución.
+    \item \textbf{Por prioridad}: Se pone en ejecución el proceso con mayor prioridad en todo momento. Se suele combinar con otros algoritmos tras relaizar una división en prioridades.
+    \item \textbf{\textit{SJF}}: Primero el trabajo más corto. Se ordenan los procesos de menor a mayor.
+    \item \textbf{\textit{FIFO}}: El primero en llegar es el primero en ejecutar. Se ejecuta estrictamente en el orden de llegada.
+  \end{itemize}
 
 
   \subsection{Drivers y Servicios Ampliados}
 
+  Los drivers son la parte del sistema operativo que se encarga de interactuar con todos los controladores posibles. Es la parte más cercana al \textit{hardware}, y es la que permite el flujo de información con el mismo.
+
+  \vspace{3mm}
+
+  No permite la reutilización porque es muy dependiente del sistema operativo.
+
+  \vspace{1mm}
+
+  Como se está creando y añadiende \textit{hardware} nuevo continuamente, aparecen nuevos drivers continuamente. Debido a esto, y a su continua necesiadad de actualizaciones, se utiliza una forma modular de implementación.
+
+  \vspace{2mm}
+
+  El objetivo de los drivers es optimizar lo máximo posible el uso del \textit{hardware}, y permitir añadir y quitar dispositivos \textit{hardware} dinámicamente.
+
+  \vspace{2mm}
+
+  La mayor parte del sistema operativo está ocupada por los drivers. Este código tiene acceso completo al sistema, de forma similar al kernel.
 
 
   \section{Introducción al Diseño de un Sistema de Ficheros}
@@ -613,9 +661,6 @@
 
     \bibitem{periferico}
     Periférico (informática). En Wikipedia. Recuperado el 24 de mayo de 2020, de \url{https://es.wikipedia.org/wiki/Perif%C3%A9rico_(inform%C3%A1tica)}
-
-    \bibitem{states}
-    studytonight, Operating System Processes. Recuperado el 25 de mayo de 2020, de \url{https://www.studytonight.com/operating-system/operating-system-processes}
 
   \end{thebibliography}
 

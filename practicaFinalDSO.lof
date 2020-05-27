@@ -8,5 +8,6 @@
 \contentsline {figure}{\numberline {7}{\ignorespaces Interrupciones \textit {Hardware}}}{7}{figure.7}%
 \contentsline {figure}{\numberline {8}{\ignorespaces Arranque Simplificado del Sistema Operativo}}{8}{figure.8}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Esquema Simplificado de un Periférico}}{10}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de Estados de los Procesos}}{11}{figure.10}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de Estados de los Procesos con Cambio de Contexto Voluntario}}{11}{figure.10}%
 \contentsline {figure}{\numberline {11}{\ignorespaces Pseudocódigo del Cambio de Contexto Voluntario}}{12}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de Estados de los Procesos con Cambio de Contexto Involuntario}}{12}{figure.12}%

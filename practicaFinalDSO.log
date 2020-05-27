@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.21)  25 MAY 2020 12:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  27 MAY 2020 13:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -556,7 +556,7 @@ LaTeX Info: Redefining \% on input line 1.
  [2]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 11.39996pt on input line 93.
-<Images/DefinicionSO.png, id=199, 803.0pt x 1188.44pt>
+<Images/DefinicionSO.png, id=201, 803.0pt x 1188.44pt>
 File: Images/DefinicionSO.png Graphic file (type png)
 <use Images/DefinicionSO.png>
 Package pdftex.def Info: Images/DefinicionSO.png  used on input line 99.
@@ -568,12 +568,12 @@ Package pdftex.def Info: Images/DefinicionSO.png  used on input line 99.
                                                   \fi \fi 
 l.143 
        <./Images/DefinicionSO.png>]
-<Images/hipervisor.png, id=209, 191.71625pt x 156.585pt>
+<Images/hipervisor.png, id=211, 191.71625pt x 156.585pt>
 File: Images/hipervisor.png Graphic file (type png)
 <use Images/hipervisor.png>
 Package pdftex.def Info: Images/hipervisor.png  used on input line 152.
 (pdftex.def)             Requested size: 113.81102pt x 92.95776pt.
-<Images/vm.png, id=211, 691.58376pt x 230.8625pt>
+<Images/vm.png, id=213, 691.58376pt x 230.8625pt>
 File: Images/vm.png Graphic file (type png)
 <use Images/vm.png>
 Package pdftex.def Info: Images/vm.png  used on input line 163.
@@ -593,7 +593,7 @@ d, duplicate ignored
 l.182     \item \textbf
                        {Rendimiento}: Eficiencia y velocidad. <./Images/hipervi
 sor.png> <./Images/vm.png>]
-<Images/estructura.png, id=220, 608.2725pt x 330.48468pt>
+<Images/estructura.png, id=222, 608.2725pt x 330.48468pt>
 File: Images/estructura.png Graphic file (type png)
 <use Images/estructura.png>
 Package pdftex.def Info: Images/estructura.png  used on input line 216.
@@ -638,7 +638,7 @@ l.295
                                                   \fi \fi 
 l.295 
       ]
-<Images/InterrupcionHW.png, id=277, 804.00375pt x 282.05376pt>
+<Images/InterrupcionHW.png, id=279, 804.00375pt x 282.05376pt>
 File: Images/InterrupcionHW.png Graphic file (type png)
 <use Images/InterrupcionHW.png>
 Package pdftex.def Info: Images/InterrupcionHW.png  used on input line 312.
@@ -654,7 +654,7 @@ l.348
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 359.
 
-<Images/Boot.png, id=292, 372.39125pt x 31.11626pt>
+<Images/Boot.png, id=294, 372.39125pt x 31.11626pt>
 File: Images/Boot.png Graphic file (type png)
 <use Images/Boot.png>
 Package pdftex.def Info: Images/Boot.png  used on input line 378.
@@ -666,7 +666,7 @@ has been already used, duplicate ignored
                                                   \fi \fi 
 l.409   \subsubsection
                       {Excepciones} <./Images/Boot.png>] [9]
-<Images/Periferico.png, id=312, 270.00874pt x 303.1325pt>
+<Images/Periferico.png, id=314, 270.00874pt x 303.1325pt>
 File: Images/Periferico.png Graphic file (type png)
 <use Images/Periferico.png>
 Package pdftex.def Info: Images/Periferico.png  used on input line 487.
@@ -678,11 +678,11 @@ Package pdftex.def Info: Images/Periferico.png  used on input line 487.
                                                   \fi \fi 
 l.506     \item D
                  ireccionamiento de E/S <./Images/Periferico.png>]
-<Images/States.png, id=322, 645.41125pt x 254.9525pt>
-File: Images/States.png Graphic file (type png)
-<use Images/States.png>
-Package pdftex.def Info: Images/States.png  used on input line 551.
-(pdftex.def)             Requested size: 284.52756pt x 112.3934pt.
+<Images/CCV.png, id=324, 517.935pt x 231.86626pt>
+File: Images/CCV.png Graphic file (type png)
+<use Images/CCV.png>
+Package pdftex.def Info: Images/CCV.png  used on input line 551.
+(pdftex.def)             Requested size: 284.52756pt x 127.38176pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 561.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -693,31 +693,45 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.575 
-       <./Images/States.png>] [12pdfTeX warning (ext4): destination with the sa
-me identifier (name{figure.11}) has been already used, duplicate ignored
+       <./Images/CCV.png>]
+<Images/CCI.png, id=335, 517.935pt x 231.86626pt>
+File: Images/CCI.png Graphic file (type png)
+<use Images/CCI.png>
+Package pdftex.def Info: Images/CCI.png  used on input line 584.
+(pdftex.def)             Requested size: 284.52756pt x 127.38176pt.
+ [12pdfTeX warning (ext4): destination with the same identifier (name{figure.11
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.595   \newpage
-                ] 
+l.608     \item \textbf
+                       {Por prioridad}: Se pone en ejecución el proceso con...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.608     \item \textbf
+                       {Por prioridad}: Se pone en ejecución el proceso con...
+ <./Images/CCI.png>] [13] 
 AED: lastpage setting LastPage
-[13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 622.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 622.
+[14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 671.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 671.
  (./practicaFinalDSO.aux
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 622.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 622.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 671.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 671.
 Package rerunfilecheck Info: File `practicaFinalDSO.out' has not changed.
 (rerunfilecheck)             Checksum: 366557C3ECC48E4021BD70D6D1E93A35;2373.
  ) 
 Here is how much of TeX's memory you used:
- 9957 strings out of 481239
- 143690 string characters out of 5920377
- 714167 words of memory out of 5000000
- 24897 multiletter control sequences out of 15000+600000
+ 9963 strings out of 481239
+ 143765 string characters out of 5920377
+ 714138 words of memory out of 5000000
+ 24901 multiletter control sequences out of 15000+600000
  570945 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,11n,60p,807b,1319s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -729,10 +743,10 @@ ublic/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1
 r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on practicaFinalDSO.pdf (13 pages, 348441 bytes).
+Output written on practicaFinalDSO.pdf (14 pages, 365507 bytes).
 PDF statistics:
- 430 PDF objects out of 1000 (max. 8388607)
- 386 compressed objects within 4 object streams
- 136 named destinations out of 1000 (max. 500000)
- 294 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 435 PDF objects out of 1000 (max. 8388607)
+ 388 compressed objects within 4 object streams
+ 137 named destinations out of 1000 (max. 500000)
+ 299 words of extra memory for PDF output out of 10000 (max. 10000000)
 
