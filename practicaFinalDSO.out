@@ -25,7 +25,11 @@
 \BOOKMARK [2][-]{subsection.3.2}{C.C.V., C.C.I y Planificaci\363n}{section.3}% 25
 \BOOKMARK [2][-]{subsection.3.3}{Drivers y Servicios Ampliados}{section.3}% 26
 \BOOKMARK [1][-]{section.4}{Introducci\363n al Dise\361o de un Sistema de Ficheros}{}% 27
-\BOOKMARK [1][-]{section.5}{Sistema de Memoria}{}% 28
-\BOOKMARK [2][-]{subsection.5.1}{Introducci\363n al Sistema de Memoria}{section.5}% 29
-\BOOKMARK [2][-]{subsection.5.2}{Gesti\363n de Memoria}{section.5}% 30
-\BOOKMARK [1][-]{section.6}{Aspectos avanzados}{}% 31
+\BOOKMARK [2][-]{subsubsection.4.0.1}{Marco de Trabajo}{section.4}% 28
+\BOOKMARK [2][-]{subsection.4.1}{Sistema de Ficheros}{section.4}% 29
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Representaci\363n tipo Unix}{subsection.4.1}% 30
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Representaci\363n tipo FAT}{subsection.4.1}% 31
+\BOOKMARK [1][-]{section.5}{Sistema de Memoria}{}% 32
+\BOOKMARK [2][-]{subsection.5.1}{Introducci\363n al Sistema de Memoria}{section.5}% 33
+\BOOKMARK [2][-]{subsection.5.2}{Gesti\363n de Memoria}{section.5}% 34
+\BOOKMARK [1][-]{section.6}{Aspectos avanzados}{}% 35

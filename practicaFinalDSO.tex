@@ -681,6 +681,122 @@
 
   \section{Introducción al Diseño de un Sistema de Ficheros}
 
+  La computación y los datos están muy relacionados el uno con el otro, ya que la computación requiere de datos sobre los que trabajar, y los datos necesitan de computación para obtener conclusiones útiles.
+
+  \vspace{2mm}
+
+  Los datos deben estar almacenados en algun lugar dentro del ordenador. Este lugar puede ser la memoria principal o la memoria secundaria.
+
+  \vspace{1mm}
+
+  La \textbf{memoria principal} no guarda la información de forma persistente, tiene un poco tamaño y es muy rápida, mientras que la \textbf{memoria secundaria} si almacena los datos de forma persistente, tiene un mayor tamaño, pero es más lenta.
+
+  \vspace{2mm}
+
+  Hace falta un mecanismo que facilita la labor de comiunicación entre las dos memorias. Y para evitar, en la medida de lo posible, que los programadores tengan que realizar asiganciones en memoria manuales, se utiliza una abstracción intermedia, en forma de sistema de ficheros y carpetas, controlada por el kernel.
+
+  \vspace{3mm}
+
+  Esta abstracción ofrece una visión lógica unificada, siendo lo suficientemente simple como para que su uso sea posible y útil, pero completa, para funcionar en la gran mayoría de máquinas actuales. Todos los distintos componenetes del sistema operativo se almacenan de esta forma.
+
+  \vspace{1mm}
+
+  Este sistema es completamente transversal, es decir, tiene comunicación con todas las partes del sistema operativo.
+
+  \subsubsection{Marco de Trabajo}
+
+  Para acceder al sistema de ficheros que trabaja a nivel de bloque, es necesario usar la caché de bloques. Para ello, es necesario usar los siguientes comandos:
+
+  \begin{itemize}
+    \item \texttt{getblk}: Sirve para obtener un bloque.
+    \item \texttt{brelse}: Sirve para liberar un bloque.
+    \item \texttt{bwrite}: Sirve para escribir en un bloque.
+    \item \texttt{bread}: Sirve para leer de un bloque
+    \item \texttt{breada}: Sirve para leer de un bloque y del siguiente.
+  \end{itemize}
+
+  La caché, al recibir estas funciones, se encargará de llamar al driver manejador del dispositivo.
+
+  \subsection{Sistema de Ficheros}
+
+  Dentro de la memoria existen dos regiones diferentes: \textbf{Metadatos}, que permiten la locaclización de los datos de los usuarios, y los \textbf{Datos} de los usuarios.
+
+  \vspace{2mm}
+
+  Los metadatos tiene que estar almacenados tanto en memoria secundaria como en memoria principal.
+
+  \vspace{3mm}
+
+  El número de errores críticos dentro del sistema de ficheros debe ser mínimo, ya que la confianza de los usuarios en este sistema es muy grande.
+
+  \vspace{2mm}
+
+  Las estructuras que forman el sistema de ficeheros son:
+
+  \begin{itemize}
+    \item \textbf{Metadatos}
+    \begin{itemize}
+      \item \textit{Bloque de Arranque}
+      \item \textit{Superbloque}
+      \item \textit{Mapas de Bits}
+      \item \textit{Lista de Recursos Libres}
+      \item \textit{Indexación}
+    \end{itemize}
+    \item \textbf{Datos}
+    \begin{itemize}
+      \item \textit{Ficheros}
+      \item \textit{Directorios}
+      \item \textit{Enlaces}
+    \end{itemize}
+  \end{itemize}
+
+  \subsubsection{Representación tipo Unix}
+
+  El bloque de \textbf{i-nodos} almacena los atributos de entrada y la referenceia a los bloques de índice para cada uno de los ficheros. Actúa como índice de los ficheros.
+
+  \vspace{2mm}
+
+  La \textbf{asignación de recursos} almacena el mapa de bits de los bloques, e indica si están ocupados o no.
+
+  \vspace{2mm}
+
+  El \textbf{superbloque} almacena el número de bloques usados para los i-nodos, para asiganción de recursos, la dirección al i-nodo raíz, etc.
+
+  \vspace{2mm}
+
+  El \textbf{bloque de arranque} almacena el código de arranque y la tabla de particiones.
+
+  \vspace{4mm}
+
+  Los \textbf{ficheros} son referenciados desde los inodos. Se almacena en el i-nodo una refernecia directa al principio del fichero, y una referencia indirecta al final del mismo.
+
+  \vspace{2mm}
+
+  Los \textbf{directorios}  son referenciados también a través de los i-nodos, y almacenan información de los ficheros que contienen. Es tratad como un fichero especial.
+
+  \vspace{2mm}
+
+  Los \textbf{enlaces} se dividen en duros y blandos. Los duros son tratados como otor fichero, y tiene asigando su propio i-nodo, mientras que los blandos son tratados como accesos directos, y son accedidos desde el directorio al que pertenecen.
+
+  \begin{figure}[H]
+    \centering
+    \imgcenter[150]{Images/unixFichero.png}
+    \caption{Sistema de Ficheros tipo Unix}
+  \end{figure}
+
+  \subsubsection{Representación tipo FAT}
+
+  Los bloques \textbf{FAT} almacenan la dirección a los distintos ficheros. El número que acompaña a FAT (FAT 12, FAT 16, FAT 32) indica el número de bloques de datos que almacena ($2^{12}$ bloques, $2^{16}$ bloques, $2^{32}$ bloques). Además, este bloque FAT se encuntra duplicado, como medio de recuperación de datos perdidos.
+
+  \begin{figure}[H]
+    \centering
+    \imgcenter[130]{Images/fatFichero.png}
+    \caption{Sistema de Ficheros tipo FAT}
+  \end{figure}
+
+
+
+
   \section{Sistema de Memoria}
 
   \subsection{Introducción al Sistema de Memoria}
