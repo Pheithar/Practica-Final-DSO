@@ -99,7 +99,7 @@
   \begin{figure}[H]
     \centering
     \imgcenter[40]{Images/DefinicionSO.png}
-    \caption{Definición de Sistema Operativo}\cite{imagenSO}
+    \caption{Definición de Sistema Operativo \cite{imagenSO}}
   \end{figure}
 
   \vspace{2mm}
@@ -151,8 +151,8 @@
 
   \begin{figure}[H]
     \centering
-    \imgcenter[40]{Images/hipervisor.png}
-    \caption{Hipervisor}\cite{hipervisor}
+    \imgcenter[60]{Images/hipervisor.png}
+    \caption{Hipervisor \cite{hipervisor}}
   \end{figure}
 
   El hipervisor expande las capacidades \textit{hardware}, de forma que cada sistema operativo puede trabajar simultaneamente con otros.
@@ -162,7 +162,7 @@
   Existen diferentes tipos de máquinas virtuales, según sus capacidades.
   \begin{figure}[H]
     \centering
-    \imgcenter[130]{Images/vm.png}
+    \imgcenter[150]{Images/vm.png}
     \caption{Tipos de Máquinas Virtuales}
   \end{figure}
 
@@ -171,11 +171,11 @@
   Las principales características de un sistema operativo son:
 
   \begin{itemize}
-    \item \textbf{Veratilidad y portabilidad}: Puede ejecutarse en diferentes máquinas.
+    \item \textbf{Versatilidad y portabilidad}: Puede ejecutarse en diferentes máquinas.
     \item \textbf{Adaptativilidad}: Permite añadir y modificar módulos, en función de la demanda de los usuarios, evolución del \textit{hardware} o aparición de distintos entornos.
     \item \textbf{Multidisciplinalidad}: Integra trabajos de distintas áreas.
     \item \textbf{Complejidad}: Dado que realiza numerosas tareas diferentes, es un programa muy complejo y con muchas líneas de código.
-    \item \textbf{Delicado}: Un fallo en culauqier parte del sistema puede provocar un colapso completo del sistea operativo.
+    \item \textbf{Delicado}: Un fallo en culauqier parte del sistema puede provocar un colapso completo del sistema operativo.
   \end{itemize}
 
   Los objetivos en el diseño de un sistema operativo son:
@@ -183,7 +183,7 @@
   \begin{itemize}
     \item \textbf{Rendimiento}: Eficiencia y velocidad.
     \item \textbf{Estabilidad}: Robustez y resistencia.
-    \item \textbf{Capacidad}: Prestaciones,. flexibilidad y compatibilidad.
+    \item \textbf{Capacidad}: Prestaciones, flexibilidad y compatibilidad.
     \item \textbf{Seguridad y Protección}.
     \item \textbf{Portabilidad}.
     \item \textbf{Claridad}.
@@ -215,8 +215,8 @@
 
   \begin{figure}[H]
     \centering
-    \imgcenter[90]{Images/estructura.png}
-    \caption{Estructura del S.O. MS-DOS}\cite{msdos}
+    \imgcenter[100]{Images/estructura.png}
+    \caption{Estructura del Sistema Operativo MS-DOS \cite{msdos}}
   \end{figure}
 
 
@@ -246,7 +246,7 @@
       ...
     }
     \end{lstlisting}
-    \caption{Estructura de un manejador de eventos}
+    \caption{Estructura de un Manejador de Eventos}
   \end{figure}
 
   \textbf{Ejemplo completo de señales}:
@@ -283,7 +283,7 @@
       return 0;
     }
     \end{lstlisting}
-    \caption{Programación de un manejador de ejemplos básico}
+    \caption{Programación de un Manejador de Ejemplos Básico}
   \end{figure}
 
 
@@ -311,7 +311,7 @@
 
   \begin{figure}[H]
     \centering
-    \imgcenter[130]{Images/InterrupcionHW.png}
+    \imgcenter[150]{Images/InterrupcionHW.png}
     \caption{Interrupciones \textit{Hardware}}
   \end{figure}
 
@@ -375,11 +375,15 @@
     \item Una vez el kernel se ha iniciado, se carga el sistema y todos los \textit{daemons} necesarios.
   \end{enumerate}
 
+  \vspace{3mm}
+
   \begin{figure}[H]
     \centering
-    \imgcenter[100]{Images/Boot.png}
+    \imgcenter[120]{Images/Boot.png}
     \caption{Arranque Simplificado del Sistema Operativo}
   \end{figure}
+
+  \vspace{3mm}
 
   El \textbf{UEFI} es un programa de arranque que se aloja en una partición especial. Ni puede ser modificado y es muy flexible. Al combinar el \textbf{UEFI} con el \textbf{MBR} aumenta la complejidad y disminuye la seguridad.
 
@@ -447,7 +451,7 @@
   \subsubsection{Procesos}
 
 
-  Un proceso es una unidad de actividad que se caracteriza por la ejecución de una secuencia de instrucciones, un estado actual, y un conjunto de recursos del sistema asociados, o, coloquialmente, un proceso es un programa en ejecución\cite{proceso}.
+  Un proceso es una unidad de actividad que se caracteriza por la ejecución de una secuencia de instrucciones, un estado actual, y un conjunto de recursos del sistema asociados, o, coloquialmente, un proceso es un programa en ejecución \cite{proceso}.
 
   \vspace{2mm}
 
@@ -478,7 +482,7 @@
 
   \subsubsection{Periféricos}
 
-  Se consideran periféricos a las unidades o dispositivos de \textit{hardware} a través de los cuales la computadora se comunica con el exterior, y también a los sistemas que almacenan o archivan la información, sirviendo de memoria auxiliar de la memoria principal. \cite{periferico}
+  Se consideran periféricos a las unidades o dispositivos de \textit{hardware} a través de los cuales la computadora se comunica con el exterior, y también a los sistemas que almacenan o archivan la información, sirviendo de memoria auxiliar de la memoria principal \cite{periferico}.
 
   \vspace{2mm}
 
@@ -486,13 +490,13 @@
 
   \begin{figure}[H]
     \centering
-    \imgcenter[50]{Images/Periferico.png}
+    \imgcenter[60]{Images/Periferico.png}
     \caption{Esquema Simplificado de un Periférico}
   \end{figure}
 
   \vspace{3mm}
 
-  Es necesrio incluir el modulo de entrada/salida porque:
+  Es necesario incluir el modulo de entrada/salida porque:
 
   \begin{enumerate}
     \item Existe una gran variedad de periféricos, y una CPU no almacena la información requerida para cada uno de ellos.
@@ -550,7 +554,7 @@
 
   \begin{figure}[H]
     \centering
-    \imgcenter[100]{Images/CCV.png}
+    \imgcenter[104]{Images/CCV.png}
     \caption{Diagrama de Estados de los Procesos con Cambio de Contexto Voluntario}
   \end{figure}
 
@@ -583,7 +587,7 @@
 
   \begin{figure}[H]
     \centering
-    \imgcenter[100]{Images/CCI.png}
+    \imgcenter[104]{Images/CCI.png}
     \caption{Diagrama de Estados de los Procesos con Cambio de Contexto Involuntario}
   \end{figure}
 
@@ -643,8 +647,8 @@
 
   \begin{figure}[H]
     \centering
-    \imgcenter{Images/EntradaSalida.png}
-    \caption{Arquitectura del sistema de E/S}\cite{E/S}
+    \imgcenter[130]{Images/EntradaSalida.png}
+    \caption{Arquitectura del Sistema de Entrada/Salida \cite{E/S}}
   \end{figure}
 
   La clasificación clásica de los drivers es en 3 tipos diferentes:
@@ -675,7 +679,7 @@
 
   \begin{figure}[H]
     \centering
-    \imgcenter[110]{Images/modulosDriver.png}
+    \imgcenter[130]{Images/modulosDriver.png}
     \caption{Estructura de un Módulo Driver}
   \end{figure}
 
@@ -780,7 +784,7 @@
 
   \begin{figure}[H]
     \centering
-    \imgcenter[150]{Images/unixFichero.png}
+    \imgcenter[160]{Images/unixFichero.png}
     \caption{Sistema de Ficheros tipo Unix}
   \end{figure}
 
@@ -790,21 +794,292 @@
 
   \begin{figure}[H]
     \centering
-    \imgcenter[130]{Images/fatFichero.png}
+    \imgcenter[145]{Images/fatFichero.png}
     \caption{Sistema de Ficheros tipo FAT}
   \end{figure}
 
+  \vspace{5mm}
 
-
+  En un mundo ideal, todos los metadatos se almacenarían en memoria, pero dado que esta memoria es limitada, tan solo se guarda la información estríctamente necesaria del superbloque , procesos e i-nodos de la partición en uso.
 
   \section{Sistema de Memoria}
 
   \subsection{Introducción al Sistema de Memoria}
 
+  Un programa es una secuencia de instrucciones escritas para realiar una tarea específica en una computadora \cite{program}. Un proceso es un programa en ejecución, y su imágen en memoria es el espacio de memoria que ocupa ese proceso.
+
+  \vspace{3mm}
+
+  Los \textbf{Sistemas Monoprogramados} son aquellos que solo permiten la ejecución de un solo proceso simultaneamente. La memoria es compartida entre el sistema operativo y el proceso.
+
+  \vspace{1mm}
+
+  Los \textbf{Sistemas Multiprogramados} son aquellos que permiten la ejecución de varios procesos al mismo tiempo, gestionados por el sistema operativo. De esta forma se mejora la ocupación de la CPU.
+
+  \vspace{5mm}
+
+  Una \textbf{región de memoria} es una zona contigua de la imagen de un proceso, que poseen las mismas características o propiedades. Estas propiedades pueden ser:
+
+  \begin{itemize}
+    \item \textbf{Permisos}: Que pueden ser de lectura, escritura, ejecución o cualquier combinación de los anteriores.
+    \item \textbf{Compartición entre hilos}: Que puede ser privada o compartida.
+    \item \textbf{Tamaño}: Que puede ser fijo o variable.
+    \item \textbf{Valor inicial}: Que puede ser con o sin soporte.
+    \item \textbf{Creación}: Que puede ser estática o dinámica.
+    \item \textbf{Sentido de Crecimiento}: Que puede ser ascendente o descendente.
+  \end{itemize}
+
+  Los procesos están formados por varias regiones.
+
+  \vspace{3mm}
+
+  Regiones principales:
+
+  \begin{itemize}
+    \item \textbf{Código}: Es donde se almacena el código fijo del proceso. Se encuentra en la parte inferior de la imagen.
+    \item \textbf{Datos}: Es el sitio en memoria donde se almacenan las variables globales. Está dividido en dos subsecciones: región para variables con valor inicial, y región para variables sin valor inicial. Se encuentra a continuación del código.
+    \item \textbf{Pila}: Es el lugar donde se almacenan las variables locales. Se encuentra en la parte superior de la imagen. Es de tamaño variable.
+    \item \textbf{Región de \textit{Heap}}: Actua de soporte para la memoria dinámica. Crece de forma ascendente.
+    \item \textbf{Ficheros proyectados}: Región específica para los ficheros usados en el proceso. La región del proceso está asociada a un fichero. Se direcciona a memoria para poder acceder a la información necesaria.
+    \item \textbf{Bibliotecas dinámicas}: Región que almacena las bibliotecas con código y datos.
+    \item \textbf{Memoria compartida}: Región que almacena la información común de varios procesos.
+  \end{itemize}
+
+  \begin{figure}[H]
+    \imgcenter[50]{Images/mapaMemoria.png}
+    \caption{Mapa de Memoria de un Proceso}
+  \end{figure}
+
+  \vspace{3mm}
+
+  El soporte para memoria principal del sistema operativo permite usar más memoria de la posible en el disco. Puede hacerse por medio de \textbf{paginación}, \textbf{segmentación} o \textbf{segmentación paginada}.
+
+  \begin{itemize}
+    \item \textbf{Paginación}: Dividir la dirección virtual en páginas, para trabajar a nivel de página en lugar de byte. Se divide la memoria en bloques de tamaño fijo, y se enlaza la mmoria virtual y la memoria física.
+    \item \textbf{Segmentación}: Dividir la memoria en secciones de tamaño variable denominados segmentos, en lugar de tamaño fijo. Se utiliza una tabla de segmentos para la correspondencia entre la memoria física y la memoria virtual.
+    \item \textbf{Segmentación paginada}: Utiliza segmentos divididos en páginas. La tabla de segmentos lleva a una tabal de paginación, y después accede a memoria principal o a disco según corresponda. Dado que estas tablas son muy grandes, se utilizan tabalas multinivel.
+  \end{itemize}
+
+
   \subsection{Gestión de Memoria}
+
+  La gestión de memoria es el ámbito encargado de gestionar la memoria entre los distintos procesos y el sistema operativo.
+
+  \begin{figure}[H]
+    \imgcenter[130]{Images/gestionMemoria.png}
+    \caption{Esquema de la Arquitectura Moderna de Gestión de Memoria}
+  \end{figure}
+
+  Objetivos principales de la memoria:
+
+  \begin{enumerate}
+    \item Localizar las referncias a memoria, traduciendolas como direcciones físicas.
+
+    Esto es necesario porque así se evita que el programador tenga que conocer dónde se va a colocar el programa dentro de la memoria al ejecutar.
+    \item Proteger los espacios de memoria, para evitar accesos a información de otros procesos sin los permisos necesarios.
+
+    Para conseguir esto, las posiciones de memoria deben ser comprobadas en tiempo de ejecución, y tienen que comprobarse por \textit{hardware}.
+    \item Compartir los espacios de memoria comunes entre distintos procesos.
+
+    Esta función debe ser tanto solicitada como aceptada explícitamente, para evitar accesos a la información de los procesos de forma indeseada.
+    \item Realizar la organización lógica de los programas, dividiendolos en módulos independientes.
+
+    Esto significa gestionar correctamente cada una de las regiones de un proceso, ya que todos los procesos no tienen las mismas regiones,
+    \item Realizar la organización física de la memoria, organizándola de forma óptima para alojar los diferentes programas y módulos.
+
+    Permite ejecutar procesos que requieren más memoria de la que hay  disponible en un momento concreto, y evita la pérdida de memoria por fragmenteación del disco.
+  \end{enumerate}
+
+  La memoria a la que tiene acceso cada proceso consiste en un espacio de direcciones plano y lineal. Además, el espacio del \textit{kernel} es compartido por todo el resto de procesos.
+
 
 
   \section{Aspectos avanzados}
+
+  \subsection{Seguridad en sistemas operativos}
+
+  Los requisitos de seguridad de un sistema operativo utilizan los conceptos y bases de la \textbf{Teoría de la Comunciación}, y sigue un proceso similar al mostrado en el siguiente esquema:
+
+  \begin{figure}[H]
+    \imgcenter[130]{Images/comunicacion.png}
+    \caption{Esquema de Comunicación Básico}
+  \end{figure}
+
+  Los requisitos de seguridad de un sistema operativo son:
+
+  \begin{itemize}
+    \item \textbf{Confidencialidad}
+
+    Consiste en restringir el acceso a usuarios no autorizados a la información del sistema informático. Para ello, es necesario que el sistema sea capaz de autorizar o autentificar a los usuarios a través de su identidad.
+
+    \item \textbf{Integridad}
+
+    Consiste en evitar que usuarios no autorizados puedan miodificar cualquier elemento del sistema informático.
+
+    \item \textbf{Disponibilidad}
+
+    Consiste en habilitar los elementos del sistema informático a los usuarios habilitados.
+
+  \end{itemize}
+
+  Existen dos formas de aplicar la seguridad informática: \textbf{Seguidad Física}, que utiliza medios físicos para aplicar la seguridad (Cerrojos, puertas...) y \textbf{Seguridad Lógica}, que utiliza mecanismos lógicos, como las contraseñas o las claves.
+
+  \vspace{3mm}
+
+  Las amenzas a la seguridad que sufren los sistemas operativos se pueden categorizar en 4 tipos:
+
+  \begin{itemize}
+    \item \textbf{Interrupción}:
+
+    Consiste en atacar la disponibilidad del sistema operativo, eliminando cualquier elemento que forma parte del proceso de comunicación.
+
+    \item \textbf{Intercepción}:
+
+    Consiste en el acceso de un usuario no autorizado a un elemento del sistema operativo. Es un ataque que afecta la confidencialidad.
+
+    \item \textbf{Modificación}:
+
+    Es un atque que afecta a la integridad, y consiste en que un usuario no autorizado accede y modifica un elemento del sistema.
+
+    \item \textbf{Invención}:
+
+    También es un ataque que vulnera la integridad, y consiste en insertar archivos nuevos al sistema sin tener autorización.
+
+  \end{itemize}
+
+  A la hora de diseñar el sistema de seguridad de un sistema operativo es necesario tener en cuenta los principios de seguridad:
+
+  \begin{enumerate}
+    \item \textbf{El principio de necesidad de saber}
+
+    Es aquel que dice que solo debe mostrarse información a aquel que la solicita, y en el grado que la solicita, y de su autorización.
+
+    \item \textbf{El principio de diseño intrínseco de la seguridad}
+
+    Debe ser algo básico de todos los sistemas tener algun método de protección.
+
+    \item \textbf{El principio del mínimo privilegio}
+
+    Cada elemento del sistema debe tener el menor privilegio posible que le permita realizar sus tareas correctamente.
+
+    \item \textbf{El principio del ahorro de mecanismos}
+
+    Los sistemas usados para facilitar la seguridad deben ser tan pequeños y simples como sea posible.
+
+    \item \textbf{El principio de aceptación}
+
+    Los sistemas de seguridad deben evitar entrometerse en la realización de las tareas del sistema informático siempre que sea posible.
+
+    \item \textbf{El principio de mediación total}
+
+    El acceso al control de los sistemas de seguridad debe hacerse con la información de control necesaria.
+
+    \item \textbf{El principio de diseño abierto}
+
+    La seguridad de un dispositivo no debe depende de cuanto de secreto es un algoritmo, si no de su funcionamiento correcto.
+
+  \end{enumerate}
+
+  \subsection{Tolerancia a fallos en sistemas operativos}
+
+  \vspace{3mm}
+
+  La tolerancia a fallos es la propiedad que le permite a un sistema seguir funcionando correctamente en caso de fallo de uno o varios de sus componentes. Un diseño tolerante a fallos es un sistema que está capacitado para continuar su funcionamiento cuando algún componente del sistema falla\cite{tolerancia}.
+
+  \vspace{6mm}
+
+  El objetivo no es construir un sistema perfecto que no cometa fallos, ya que esto es algo imposible, si no un sistema que pueda seguir funcionando correctamente cuando se encuentra con un fallo. Estos sistemas suelen estar diseñados para tener una vida útil larga, que son difíciles de mantener, que tienen una disponibilidad añta, e implementan aplicaciones críticas.
+
+  \begin{figure}[H]
+    \imgcenter[150]{Images/fallos.png}
+    \caption{Esquema de la Progresión de los Errores}
+  \end{figure}
+
+  \subsection{Sistemas distribuidos}
+
+  Un sistema distribuido es un conjunto de ordenadores que trabajan juntos de forma coordinada, a través del intercambio de mensajes, para conseguir un objetivo. En dicho sistema, el estado y los programas se guardan en múltiples ordenadores. A pesar de que los procesos que tienen lugar están separados entre los diferentes participantes, para el usuario parece que está trabajando con un único ordenador\cite{distr}.
+
+  \vspace{5mm}
+
+  \begin{figure}[H]
+    \imgcenter[120]{Images/distr.jpg}
+    \caption{Esquema de un Sistema Distribuido\cite{distr2}}
+  \end{figure}
+
+  Las principales ventajas y desventajas de los sistemas distribuidos son:
+
+  \begin{center}
+    \begin{tabular}{ p{0.5\textwidth} || p{0.5\textwidth} }
+      \textbf{Ventajas} & \textbf{Desventajas} \\
+      \hline
+      \hline
+      Se comparten los recursos de \textit{hardware}, \textit{software} y de datos & Tiene una complejidad muy alta\\
+      &  \\
+      La escalabilidad se hace añadiendo nuevo \textit{hardware} & Depende en gran manera de la interconexión\\
+      &  \\
+      Tiene un rendimiento muy alto gracias al gran número de procesadores & Posee un menor grado de seguridad \\
+      &  \\
+      Tolerancia a errores, gracias al gran número de procesadores e información replicada & El \textit{software} del sistema operativo es más complejo\\
+      &  \\
+      Relación muy buena entre rendimiento y coste & Necesiadad de repartir la carga de trabajo eficientemente\\
+      &  \\
+    \end{tabular}
+  \end{center}
+
+  \subsection{Sistemas de tiempo real}
+
+  Un sistema operativo de tiempo real es aquel que ha sido desarrollado para aplicaciones de tiempo real. Como tal, se le exige corrección en sus respuestas bajo ciertas restricciones de tiempo. Si no las respeta, se dirá que el sistema ha fallado. Para garantizar el comportamiento correcto en el tiempo requerido se necesita que el sistema sea predecible\cite{real}.
+
+  \vspace{2mm}
+
+  El procesamiento a tiempo real es aquel en el que la corrección y exactitud del sistema se mide en función del resultado obtenido y el instante en el que el resultado se produce. PAra ello, necesita que los procesos se ejeuten a tiempo real, y tienen que reaccionar a sucesos externos.
+
+  \vspace{3mm}
+
+  Clasificación de los sistemas operativos de tiempo real:
+
+  \begin{itemize}
+    \item \textbf{\textit{Hard-real time}}
+
+    El periodo de tiempo es muy importante y tiene que cumplirse estrictamente. Las tareas suelen ser críticas, y durante periodods de tiempo muy pequeños.
+
+    \item \textbf{\textit{Soft-real time}}
+
+    El periodo de tiempo es importante pero no estricto. Suelen ser tareas no críticas, durante un tiempo más largo.
+
+    \item \textbf{\textit{Firm-real time}}
+
+    El periodo de tiempo es muy importante, y una tarea fuera de plazo es inutil, pero no poduce errores.
+
+  \end{itemize}
+
+  Requisitos de los sistemas operativos de tiempo real:
+
+  \begin{enumerate}
+    \item \textbf{Determinismo}
+
+    Los sistemas deterministas son aquellos que realizan sus operaciones siempre de la misma forma, ocupando el mismo tiempo. Es decir, no se ven involucrados factores aleatorios.
+
+    \item \textbf{Sensibilidad}
+
+    Hace referencia a el tiempo que tarda el sistema en dar servico a una interrupción, una vez ha sido reconocida.
+
+    \item \textbf{Control del usuario}
+
+    Esta característica es mayor en los sietemas operativos de tiempo real que en los sistemas operativos convencionales. En los de tiempo real, es necesario permitir a los usuarios decidir la prioridad de las tareas.
+
+    \item \textbf{Fiabilidad}
+
+    Es extremadamente necesaria, dado que responde a los suscesos que recibe al momento.
+
+    \item \textbf{Tolerancia a fallos}
+
+    Al igual que la fiabilidad, es extremadamente necesaria, y por el mismo motivo.
+  \end{enumerate}
+
+
+
+
 
 
   \newpage
@@ -827,6 +1102,23 @@
 
     \bibitem{E/S}
     Arquitectura del sistema de E/S. Lección 3c procesos, periféricos, drivers y servicios ampliados. Grupo ARCOS, Departamento de Informática, Universidad Carlos III de Madrid. Diapositiva 22. Recuperado el 27 de mayo de 2020, de \url{https://aulaglobal.uc3m.es/pluginfile.php/3449191/mod_resource/content/18/dso-clases-3c-ppdsa_drv_sa-v5e.pdf} (Puede que no sea visisble a no miembros de la Universidad Carlos III de Madrid)
+
+    \bibitem{program}
+    Programa informático. En Wikipedia. Recuperado el 30 de mayo de 2020, de \url{https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico}
+
+    \bibitem{tolerancia}
+    Diseño de tolerancia a fallos. En Wikipedia. Recuperado el 31 de mayo de 2020, de \url{https://es.wikipedia.org/wiki/Dise%C3%B1o_de_tolerancia_a_fallos}
+
+    \bibitem{distr}
+    Medium, ¿Qué es un sistema distribuido?. Adrian Rodriguez. Recuperado el 31 de mayo de 2020, de \url{https://medium.com/@adr.rod87/qu%C3%A9-es-un-sistema-distribuido-442870a40bc4}
+
+    \bibitem{distr2}
+    ScienceDirect, Distributed Computing. Dinkar Sitaram, Geetha Manjunath. Recuperado el 31 de mayo de 2020, de \url{https://www.sciencedirect.com/topics/computer-science/distributed-computing}
+
+    \bibitem{real}
+    Sistema operativo de tiempo real. En Wikipedia. Recuperado el 31 de mayo de 2020, de \url{https://es.wikipedia.org/wiki/Sistema_operativo_de_tiempo_real}
+
+
 
   \end{thebibliography}
 
